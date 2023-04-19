@@ -20,7 +20,7 @@ Open a browser on your mobile phone, then type in the above IP address and port 
 ## Links to view assignments
 Start link "..." + :
 1. Page layout: "/"
-2. Geolocation determination: "/geolocation"
-3. Interface: "/party"
+2. Geolocation determination: "#/geolocation"
+3. Interface: "#/party"
 
 
