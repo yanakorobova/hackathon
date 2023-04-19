@@ -1,0 +1,81 @@
+@import "src/common/styles/mixins";
+@import "src/common/styles/variables";
+.partyBlock {
+  width: 100%;
+  .container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 5% auto;
+    padding: 4%;
+    box-shadow: hsla(210,8%,62%,.2) 0 8px 24px;
+    background: #fafafa;
+    border-radius: $border-radius;
+    .combobox {
+      width: 400px;
+      border-radius: $border-radius;
+    }
+
+    .body {
+      margin-top: 2rem;
+      & > p{
+        text-align: center;
+        @include text(600,18px);
+      }
+      & > button{
+        border:none;
+        background-color: white;
+        box-shadow: hsla(210,8%,62%,.2) 0 8px 24px;
+        border-radius: $border-radius;
+        line-height: 2.5;
+        padding: 0 1.5rem;
+        font-weight: 500;
+        &:hover{
+          background-color: #0078D2;
+          color: white;
+        }
+      }
+      .title {
+        margin: 25px 0;
+        @include text(600, 32px);
+      }
+
+      .information {
+        & > ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          & > li {
+            line-height: 1.8;
+          }
+        }
+      }
+
+      .meta {
+        margin-top: 3rem;
+        gap: 1.5rem;
+        @include flex(flex-start,flex-start,wrap);
+
+        & > div{
+          white-space: nowrap;
+        }
+        .group {
+          gap: 1rem;
+          @include flex(flex-start,center,row,wrap);
+          & > span {
+            padding: 0 1rem;
+            background-color: white;;
+            box-shadow: hsla(210,8%,62%,.2) 0 8px 24px;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 3px;
+            &:hover{
+              background-color: #0078D2;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

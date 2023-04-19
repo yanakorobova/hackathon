@@ -1,0 +1,47 @@
+@import "src/common/styles/mixins";
+
+.container {
+  .title {
+    margin-top: 0;
+    @include title();
+  }
+
+  .buttonsContainer {
+    display: inline-block;
+    margin-bottom: 56px;
+    border-collapse: collapse;
+    border: 1px solid rgba(0, 66, 105, 0.28);
+    border-radius: 4px;
+
+    & > button {
+      padding: 9.5px 20px;
+      font-size: 16px;
+      line-height: 21px;
+      background: transparent;
+      position: relative;
+      border: none;
+
+      &::after {
+        position: absolute;
+        content: '|';
+        right: -1px;
+        z-index: -1;
+        color: rgba(0, 66, 105, 0.28);
+      }
+      &:first-child{
+        background:  rgba(0, 66, 105, 0.07);
+      }
+      &:last-child:after{
+        position: absolute;
+        content: '';
+      }
+    }
+  }
+
+  .cards {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+  }
+}

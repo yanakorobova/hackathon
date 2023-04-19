@@ -1,0 +1,15 @@
+@import "src/common/styles/variables";
+
+.button{
+  background: $color-button;
+  border-radius: 4px;
+  padding: 0 20px;
+  color: white;
+  height: 40px;
+  border-color: transparent;
+}
+.completed{
+  color: $color-button;
+  border-color: $color-button;
+  background: white;
+}

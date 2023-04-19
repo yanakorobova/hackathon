@@ -1,0 +1,59 @@
+@import "src/common/styles/mixins";
+@import "src/common/styles/variables";
+
+.container {
+  .title {
+    margin-top: 0;
+    @include title();
+  }
+
+  .theme {
+    padding: 32px 106px;
+    @include wrapper();
+    @include flex(flex-start, center);
+    gap: 106px;
+
+    .progressBar {
+      width: 154px;
+      height: 154px;
+    }
+    .textBar{
+      text-align: center;
+      & > p{
+        margin: 0;
+        font-size: 24px;
+      }
+      & > span{
+        color: rgba(0, 32, 51, 0.6);
+      }
+    }
+    .description {
+      @include description()
+    }
+
+  }
+
+
+  .button {
+    @include flex(flex-start, center);
+    margin-top: 24px;
+    gap: 14px;
+
+    & button {
+      @include flex(flex-start, center);
+      gap: 12px;
+      height: 32px;
+      background: rgba(0, 66, 105, 0.07);
+      border-radius: 4px;
+      padding: 0 12px 0 16px;
+      border-color: transparent;
+      color: rgba(0, 57, 92, 0.8);
+    }
+
+    .line {
+      background: rgba(0, 65, 102, 0.2);;
+      height: 1px;
+      flex-grow: 1;
+    }
+  }
+}

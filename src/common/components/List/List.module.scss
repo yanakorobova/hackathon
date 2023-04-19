@@ -1,0 +1,43 @@
+@import "src/common/styles/mixins";
+@import "src/common/styles/variables";
+
+.list {
+  height: 260px;
+  padding: 32px;
+  @include wrapper();
+
+  .description {
+    @include description();
+
+    .text {
+      .title {
+        font-size: 24px;
+      }
+      & > ul{
+        padding-bottom: 3px;
+      }
+    }
+
+    .containerButton {
+      @include flex(space-between, center);
+
+      .check {
+        .completed {
+          @include flex(center, center);
+          width: 24px;
+          height: 24px;
+          background-color: $color-bar;
+          border-radius: 50%;
+        }
+        .z{
+          color: rgba(0, 32, 51, 0.6);
+        }
+        .progressBar{
+          margin-left: 10px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

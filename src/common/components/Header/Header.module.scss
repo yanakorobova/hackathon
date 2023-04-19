@@ -1,0 +1,78 @@
+@import "src/common/styles/mixins";
+
+header {
+  background: #fff;
+  white-space: nowrap;
+  box-shadow:  0 1px rgba(0, 65, 102, 0.2);
+  .container {
+    margin: 0 auto;
+    padding: 0 40px 0 24px;
+    max-width: 1920px;
+    height: 60px;
+    @include flex(flex-start, center);
+
+    .title {
+      @include text(700, 18px);
+      margin-right: 36px;
+    }
+
+    .block {
+      max-width: 1440px;
+      width: 100%;
+      @include flex(space-between, center);
+
+      .navBar {
+        @include flex(flex-start, center);
+        gap: 32px;
+
+        & a {
+          position: relative;
+          text-decoration: none;
+          color: rgba(0, 32, 51, 0.6);
+        }
+
+        .active {
+          color: #002033;;
+
+          &::before {
+            position: absolute;
+            content: '';
+            bottom: -18px;
+            width: 100%;
+            height: 2px;
+            background: #0078D2;
+          }
+        }
+      }
+
+      .buttons {
+        & > button {
+          background: transparent;
+          border: none;
+        }
+      }
+
+      .login {
+        @include flex(center, center);
+
+        & img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .login {
+      margin-left: 20px;
+      @include flex(center, center);
+      gap: 12px;
+
+      & img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

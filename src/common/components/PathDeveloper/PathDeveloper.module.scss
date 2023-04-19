@@ -1,0 +1,58 @@
+@import "src/common/styles/mixins";
+
+.container {
+  background: rgba(0, 32, 51, 0.05);
+  border-radius: 8px;
+  margin-top: 40px;
+  padding: 32px;
+  padding-right: 0;
+  margin-bottom: 48px;
+
+  .tools {
+    padding-right: 32px;
+    margin-bottom: 24px;
+    @include flex(flex-start, center);
+    gap: 32px;
+
+    .title {
+      @include title();
+    }
+
+    & button {
+      height: 32px;
+      background: rgba(0, 66, 105, 0.07);
+      border-radius: 4px;
+      padding: 0 12px 0 16px;
+      border-color: transparent;
+      color: rgba(0, 57, 92, 0.8);
+    }
+
+    .sliderButtons {
+      margin-left: auto;
+      @include flex(center, center);
+      gap: 8px;
+
+      & button {
+        width: 32px;
+        border-radius: 50%;
+        padding: 0;
+      }
+
+    }
+  }
+
+  .cards {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    & > div {
+      @include flex(flex-start, center);
+      gap: 24px;
+      position: absolute;
+      bottom: 0;
+      & > div{
+        width: 464px !important;
+      }
+    }
+  }
+}
