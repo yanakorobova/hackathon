@@ -7,7 +7,7 @@ import {Card} from "../../common/components/Card/Card";
 
 
 export const Interface = () => {
-debugger
+
     const [value, setValue] = useState<DaDataSuggestion<DaDataParty> | undefined>();
     const [branches, setBranches] = useState<any[]>()
     const [party, setParty] = useState<any>()
