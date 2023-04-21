@@ -15,7 +15,7 @@ export const Card: React.FC<CardPropsType> = ({branches, party}) => {
     useEffect(()=>{
         setPartyInfo(party.data)
     },[party.value])
-console.log(partyInfo)
+
     return (
         <>
             {partyInfo?.branch_type === 'BRANCH' && party?.data.branch_type === 'MAIN' && <button onClick={backHandler}>
