@@ -7,7 +7,7 @@ type CardPropsType = {
 }
 
 export const Card: React.FC<CardPropsType> = ({branches, party}) => {
-    debugger
+
     const [partyInfo, setPartyInfo] = useState<any>()
     const setPartyInfoHandler = (b: any) => setPartyInfo(b.data)
     const backHandler = () => setPartyInfo(party.data)
